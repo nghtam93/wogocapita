@@ -136,7 +136,7 @@ $(document).ready(function(){
 
 
     //check home
-    if($('body').hasClass( "home" ) || $('body').hasClass( "about" )){
+    if($('body').hasClass( "home" )){
 
         $('.home-about__slider').slick({
             slidesToShow: 3,
@@ -186,6 +186,32 @@ $(document).ready(function(){
             ]
         });
 
+    }
+
+    if($('body').hasClass( "page-template-page-about" )){
+
+        $('.home-about__slider').slick({
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            arrows: false,
+            dots: true,
+            responsive: [
+                {
+                  breakpoint: 1199,
+                  settings: {
+                    slidesToShow: 2,
+                  }
+                },
+                {
+                  breakpoint: 767,
+                  settings: {
+                    centerMode: true,
+                    variableWidth: true,
+                    slidesToShow: 1,
+                  }
+                }
+            ]
+        });
     }
 
     //check home

@@ -76,6 +76,9 @@ strong{
 
 .wrapper{
     overflow-x: hidden;
+    &::-webkit-scrollbar {
+      display: none;
+    }
 }
 // Fix iframe
 .videoWrapper{position:relative;padding-bottom:56.25%; /* 16:9 */height:0;}
