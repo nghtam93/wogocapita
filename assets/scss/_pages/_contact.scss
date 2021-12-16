@@ -1,0 +1,140 @@
+.page__contact{
+	position: relative;
+
+	&:before{
+		content: '';
+	    position: absolute;
+	    top: 0;
+	    left: 0;
+	    width: 37%;
+	    height: 100%;
+	    max-height: 1440px;
+	    background: url(../img/light-left.png) no-repeat;
+	    background-size: contain;
+	    background-position: left;
+	    z-index: -1;
+	}
+	.container{
+		max-width: 964px;
+		margin: 0 auto;
+	}
+
+	.entry-content{
+		font-weight: normal;
+		font-size: 20px;
+		line-height: 28px;
+		color: #FFFFFF;
+
+		margin-bottom: 46px;
+		strong{
+			color: #5693C3;
+		}
+		p+p{
+			margin-top: 30px;
+		}
+	}
+	&__email{
+		position: relative;
+		font-size: 20px;
+		line-height: 28px;
+		color: #FFFFFF;
+		margin-bottom: 80px;
+		&:after{
+	        content: '';
+		    position: absolute;
+		    bottom: -30px;
+		    left: 0;
+		    right: 0;
+		    width: 100px;
+		    height: 8px;
+		    background: url(../img/line.svg) no-repeat;
+		    background-size: contain;
+		    margin: 0 auto;
+	    }
+		strong{
+			font-weight: bold;
+			color: #467B9D;
+		}
+		a{
+			color: #FFFFFF;
+		}
+	}
+	&__thumb{
+		margin-bottom: 80px;
+	}
+	.wpcf7-form{
+	    font-weight: normal;
+	    font-size: 14px;
+	    color: #FFFFFF;
+	    margin: 0 auto 30px;
+	    transition: all .5s;
+	    background: #1C1E22;
+		border-radius: 16px;
+	    padding: 48px 24px;
+	    &__header{
+	    	text-align: center;
+	    	margin-bottom: 32px;
+	    }
+	    &__title{
+	    	font-weight: 600;
+			font-size: 24px;
+			line-height: 32px;
+			color: #6DC6DA;
+	    }
+	    &__excerpt{
+	    	font-weight: normal;
+			font-size: 18px;
+			line-height: 32px;
+			color: #828282;
+	    }
+		input:not(.wpcf7-submit), textarea{
+    		padding: 12px 16px;
+		    border: 1px solid #6DC6DA;
+		    background: transparent;
+		    color: #fff;
+			&[type="radio"]{
+				margin-bottom: 0;
+				margin-right: 5px;
+			}
+			&:focus{
+				outline: none;
+				box-shadow: none;
+			}
+		}
+		.wpcf7-submit{
+			width: 100%;
+			max-width: 400px;
+			margin: 0 auto;
+		}
+	}
+
+
+	@media (max-width: 1199px){
+		.wpcf7-form{
+			input, textarea {
+			    font-size: 14px;
+			}
+			&__excerpt{
+				font-size: 14px;
+				line-height: 28px;
+			}
+		}
+	}
+	@media (max-width: 991px){
+		.wpcf7-form__title {
+		    font-size: 22px;
+		}
+		.entry-content {
+		    font-size: 18px;
+		}
+	}
+	@media (max-width: 767px){
+		&__thumb{
+			margin-bottom: 40px;
+		}
+		&__form{
+			max-width: 450px;
+			margin: 0 auto;
+		}
+	}
+}
